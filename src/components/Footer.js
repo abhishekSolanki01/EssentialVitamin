@@ -85,7 +85,7 @@ const Footer = () => {
 };
 
 const ContactCard = ({ title, value, icon }) => (
-  <div className="rounded-xl bg-green-800 p-4 bg-[#215d72] grid grid-cols-5">
+  <div className="rounded-xl p-4 bg-[#215d72] grid grid-cols-5">
     <div className="col-span-1">{icon}</div>
     <div className="col-span-4" >
       <div className="hidden sm:block text-start">{title}</div>

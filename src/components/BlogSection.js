@@ -74,32 +74,82 @@ const BlogSection = () => {
 const fn = (news) => {
   let a = true;
   return (
-    <div className="sm:grid sm:grid-cols-4 gap-4 mb-4 sm:overflow-visible sm:whitespace-normal
+    <div className="sm:grid sm:grid-cols-4 gap-4 mb-1 sm:overflow-visible sm:whitespace-normal
       flex overflow-x-scroll scroll-smooth snap-x space-x-4 whitespace-nowrap 
     ">
-      {[1, 3, 5, 7].map((el, i) => {
-        a = !a;
-        return (
-          <div key={el} className="col-span-1 snap-always snap-center">
+          <div className="col-span-1 snap-always snap-center">
             <div className="grid grid-rows-12 gap-4 min-h-[500px] sm:min-h-[600px]">
-              <div className={`row-span-${i%2 ? '4' : '7'}`}>
+              <div className={`row-span-7`}>
                 <NewsCard
-                  image={news[el - 1].image}
-                  title={news[el - 1].title}
-                  key={el - 1}
+                  image={news[0].image}
+                  title={news[0].title}
+                  key={0}
                 />
               </div>
-              <div className={`row-span-${i%2 ? '7' : '4'}`}>
+              <div className={`row-span-4`}>
                 <NewsCard
-                  image={news[el].image}
-                  title={news[el].title}
-                  key={el}
+                  image={news[1].image}
+                  title={news[1].title}
+                  key={1}
                 />
               </div>
             </div>
           </div>
-        );
-      })}
+          <div className="col-span-1 snap-always snap-center">
+            <div className="grid grid-rows-12 gap-4 min-h-[500px] sm:min-h-[600px]">
+              <div className={`row-span-4`}>
+                <NewsCard
+                  image={news[2].image}
+                  title={news[2].title}
+                  key={2}
+                />
+              </div>
+              <div className={`row-span-7`}>
+                <NewsCard
+                  image={news[3].image}
+                  title={news[3].title}
+                  key={3}
+                />
+              </div>
+            </div>
+          </div>
+
+          <div className="col-span-1 snap-always snap-center">
+            <div className="grid grid-rows-12 gap-4 min-h-[500px] sm:min-h-[600px]">
+              <div className={`row-span-7`}>
+                <NewsCard
+                  image={news[4].image}
+                  title={news[4].title}
+                  key={4}
+                />
+              </div>
+              <div className={`row-span-4`}>
+                <NewsCard
+                  image={news[5].image}
+                  title={news[5].title}
+                  key={5}
+                />
+              </div>
+            </div>
+          </div>
+          <div className="col-span-1 snap-always snap-center">
+            <div className="grid grid-rows-12 gap-4 min-h-[500px] sm:min-h-[600px]">
+              <div className={`row-span-4`}>
+                <NewsCard
+                  image={news[6].image}
+                  title={news[6].title}
+                  key={6}
+                />
+              </div>
+              <div className={`row-span-7`}>
+                <NewsCard
+                  image={news[7].image}
+                  title={news[7].title}
+                  key={7}
+                />
+              </div>
+            </div>
+          </div>
     </div>
   );
 };
